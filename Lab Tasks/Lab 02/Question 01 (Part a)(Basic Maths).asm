@@ -1,4 +1,4 @@
-INCLUDE Irvine32.inc
+INCLUDE Irvine32.inc        ;Mutahir Ahmed Khan 24k-0030
 .data
 
 num1    DD 25
@@ -20,7 +20,7 @@ main PROC
 
     mov sumRes, eax      
 
-    call WriteDec                   
+    call WriteInt                   
 
     exit
 main ENDP
