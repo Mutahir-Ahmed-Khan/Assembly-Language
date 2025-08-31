@@ -14,7 +14,7 @@ main PROC
     mov edx, OFFSET msg     ;From Manual
     call WriteString
 
-    call WriteDec
+    call WriteInt
                       
 
 exit
