@@ -1,8 +1,8 @@
 INCLUDE Irvine32.inc ;Mutahir Ahmed Khan 24k0030 
 .data
 	
-	num1 DWORD 20
-	num2 DWORD 10
+	num1 DWORD 200
+	num2 DWORD 100
 .code
 main PROC
 
