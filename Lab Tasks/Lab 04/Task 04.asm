@@ -5,6 +5,7 @@ INCLUDE Irvine32.inc        ;Mutahir Ahmed Khan 24k-0030
 	y DWORD 14h 
 	z DWORD 5h 
 	w DWORD 10h
+	finalResult DWORD ?
 
 .code
 main PROC 
@@ -18,7 +19,7 @@ main PROC
 	sub eax, ebx
 	mov edx, eax
 
-	call WriteInt 
+	 mov finalResultl, edx
 
 	exit
 main ENDP
