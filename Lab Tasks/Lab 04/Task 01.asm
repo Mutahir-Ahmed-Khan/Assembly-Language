@@ -1,4 +1,5 @@
 INCLUDE Irvine32.inc        ;Mutahir Ahmed Khan 24k-0030 
+;comments for own understanding
 .data  
 
 	num1 BYTE 25d
