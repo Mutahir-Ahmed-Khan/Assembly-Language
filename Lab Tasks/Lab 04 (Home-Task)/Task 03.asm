@@ -1,5 +1,5 @@
 INCLUDE Irvine32.inc ;Mutahir Ahmed Khan 24k-0030
-comments are for own understanding
+;comments are for own understanding
 
 .data
 
