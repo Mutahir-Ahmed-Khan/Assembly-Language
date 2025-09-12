@@ -3,7 +3,7 @@ INCLUDE Irvine32.inc ;Mutahir Ahmed Khan 24k-0030
 
 .data
 
-	arr WORD 20 DUP(5)
+	uArray WORD 20 DUP(5)
 
 .code
 main PROC
