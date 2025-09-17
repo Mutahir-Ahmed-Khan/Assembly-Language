@@ -3,6 +3,7 @@ INCLUDE Irvine32.inc        ;Mutahir Ahmed Khan 24k-0030
 .data 
 
 	myDoubleWord DWORD 12345678h
+	wordList WORD 5678h,1234h ; writing "5678h"  because of ~(little endian)~
 
 .code
 main PROC 
@@ -15,6 +16,10 @@ main PROC
 									  ;statement
 
 	mov bl, BYTE PTR myDoubleWord ;78 to bl ~(little endian)~, +1 would move to next means it will take 56 
+
+	;WE CAN MOVE FROM SMALLER TO BIGGER 
+
+	mov eax, DWORD PTR wordList
 
 exit
 main ENDP
