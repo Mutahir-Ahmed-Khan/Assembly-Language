@@ -1,0 +1,18 @@
+*Loop Condtion depends on the register CX or ECX, it automatically decrement it and loop until zero 
+
+//Syntax : 
+  Loop Destination
+
+-----------------------------------
+//Code
+  mov ecx, 10
+  mov eax, 1
+
+  L1: 
+    call WriteDec
+    call Crlf 
+    inc eax
+    loop L1
+-----------------------------------
+
+
