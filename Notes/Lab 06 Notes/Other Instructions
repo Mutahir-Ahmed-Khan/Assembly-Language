@@ -1,0 +1,52 @@
+1. Crlf (Register used: None)
+:Used for New Line
+------------------------------------------------
+msg BYTE "New Line",0
+     mov eax, 1
+     mov edx, OFFSET msg
+     call WriteDec
+     call Crlf 
+     call WriteString
+     call Crlf  
+     inc eax
+     call WriteDec
+------------------------------------------------
+
+2. WriteBin (Register used: EAX)
+:Convert the value of EAX in a binary Format
+------------------------------------------------
+     mov eax, 12
+     call WriteBin  
+OUTPUT: 0000 0000 0000 0000 0000 0000 0000 1100
+------------------------------------------------
+
+3. WriteChar (Register used: AL)
+:print the contents of AL to a Chararcter
+------------------------------------------------
+     mov al, 65
+     call WriteChar
+OUTPUT: A
+------------------------------------------------
+
+4. WriteDec, Hex, Int (Regestir used: EAX), String (Register used: EDX)
+------------------------------------------------
+msg BYTE "Printing the String" , 0
+     mov eax, 19 
+     call WriteInt 
+     call Crlf
+     call WriteDec
+     call Crlf
+     mov eax, 0FFF2h
+     call WriteHex
+     call Crlf
+     mov edx, OFFSET msg
+     call WriteString
+OUTPUT: 
++19
+19
+0000FFF2
+Printing the String
+------------------------------------------------
+
+
+
