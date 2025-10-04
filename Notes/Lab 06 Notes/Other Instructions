@@ -31,14 +31,22 @@ OUTPUT: A
 4. WriteDec, Hex, Int (Regestir used: EAX), String (Register used: EDX)
 ------------------------------------------------
 msg BYTE "Printing the String" , 0
+
+     ;Integer
      mov eax, 19 
      call WriteInt 
      call Crlf
+
+     ;Decimal
      call WriteDec
      call Crlf
+
+     ;hexaDecimal
      mov eax, 0FFF2h
      call WriteHex
      call Crlf
+
+     ;String
      mov edx, OFFSET msg
      call WriteString
 OUTPUT: 
@@ -48,5 +56,57 @@ OUTPUT:
 Printing the String
 ------------------------------------------------
 
+5. ReadChar (Register used: AL) 
+:wait for keypress and return the value into the AL
+------------------------------------------------
+msg BYTE "You Pressed: " , 0
+     mov edx, OFFSET msg
+     call WriteString
+     call ReadChar
+     call WriteChar
+OUTPUT: 
+you pressed: (Any Character)
+------------------------------------------------
 
+6. ReadDec, Hex, Int (Register used: EAX)
+------------------------------------------------
+msg1 BYTE "Enter Decimal Number (Unsigned): " , 0
+msg2 BYTE "Enter Decimal Number (Signed): " , 0
+msg3 BYTE "Enter HexaDecimal Number: " , 0
+output BYTE "OUTPUT: ", 0
+     ;Decimal
+     mov edx, OFFSET msg1
+     call WriteString
+     call ReadDec
+     mov edx, OFFSET output
+     call WriteString
+     call WriteDec
+     
+     call Crlf
+
+     ;Integer
+     mov edx, OFFSET msg2
+     call WriteString
+     call ReadInt
+     mov edx, OFFSET output
+     call WriteString
+     call WriteInt
+
+     call Crlf
+
+     ;HexaDecimal
+     mov edx, OFFSET msg3
+     call WriteString
+     call ReadHex
+     mov edx, OFFSET output
+     call WriteString
+     call WriteHex
+OUTPUT: 
+Enter Decimal Number (Unsigned): 12
+OUTPUT: 12
+Enter Decimal Number (Signed): -12
+OUTPUT: -12
+Enter HexaDecimal Number: FFFF
+OUTPUT: 0000FFFF
+------------------------------------------------
 
