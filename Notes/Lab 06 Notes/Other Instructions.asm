@@ -20,7 +20,21 @@ msg BYTE "New Line",0
 OUTPUT: 0000 0000 0000 0000 0000 0000 0000 1100
 ------------------------------------------------
 
-2.Clrser
+***.Clrscr
+------------------------------------------------
+msg BYTE "Enter Any Character: ", 0 
+msg1 BYTE "Haa! Got you", 0 
+   mov edx, OFFSET msg
+   call WriteString
+
+   mov eax, 1000
+   call Delay
+
+   call Clrscr
+
+   mov edx, OFFSET msg1
+   call WriteString
+------------------------------------------------
 
 3. WriteChar (Register used: AL)
 :print the contents of AL to a Chararcter
@@ -110,6 +124,11 @@ Enter Decimal Number (Signed): -12
 OUTPUT: -12
 Enter HexaDecimal Number: FFFF
 OUTPUT: 0000FFFF
+------------------------------------------------
+
+***.ReadString
+------------------------------------------------
+
 ------------------------------------------------
 
 7. Delay (Register used: EAX) 
