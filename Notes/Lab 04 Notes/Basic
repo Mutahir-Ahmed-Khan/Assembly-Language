@@ -1,0 +1,37 @@
+1.Label: mnemonic [Operands] 
+2.Operands -> mnemonic [Destination][Source]
+
+There are three types of instruction operands
+* immediate value like 10, 20, -12
+* Registers *EAX, AX etc
+* Memory counter, var1 
+
+AL/AH --- 8 Bit 
+AX --- 16 bit 
+EAX --- 32 Bit 
+
+3. MOV instruction 
+----------------------------------------------------
+* Both operands should be of same size
+* Both cant be Memory Operands
+* Imediate Value cannot be moved to segment register 
+* CS, EIP and IP cannot be destination
+----------------------------------------------------
+
+4. MOVZX -> Zero extended used for unsigned
+5. MOVSX -> Sign Extended used for signed
+--------------------------------------
+MOVZX [Big Register], [Small Register]
+MOVSX [Big Register], [Small Register]
+--------------------------------------
+
+6.INC and DEC (+) and (-)
+
+7. XCHG -> Does not accept immediate value
+
+8. ADD/SUB/NEG 
+
+9. Symbolic Constants
+
+
+
