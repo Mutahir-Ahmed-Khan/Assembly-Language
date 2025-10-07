@@ -31,7 +31,12 @@ MOVSX [Big Register], [Small Register]
 
 8. ADD/SUB/NEG 
 
-9. Symbolic Constants
+9. Symbolic Constants 
+*******************************************************
 
-
+2D array Declaration:
+  [1 2 3]
+  [4 5 6]
+array WORD 2 DUP (3 DUP (?))
+[var TYPE row DUP (col DUP(?)]
 
