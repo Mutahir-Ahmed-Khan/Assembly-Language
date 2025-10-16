@@ -1,0 +1,41 @@
+INCLUDE Irvine32.inc
+
+.data
+msg1 BYTE "Enter two numbers: ",0
+trueMsg BYTE "Condition True",0
+falseMsg BYTE "Condition False",0
+a SDWORD ?
+b SDWORD ?
+
+.code
+main PROC
+
+    mov edx, OFFSET msg1
+    call WriteString
+    call ReadInt
+    mov a, eax
+    call ReadInt
+    mov b, eax
+
+    mov eax, a
+    mov ebx, b
+    cmp eax, ebx
+    jle f
+    cmp eax, 100
+    jge f
+
+    mov edx, OFFSET trueMsg
+    call WriteString
+    call Crlf
+    jmp e
+
+f:
+    mov edx, OFFSET falseMsg
+    call WriteString
+    call Crlf
+
+e:
+    exit
+
+main ENDP
+END main
